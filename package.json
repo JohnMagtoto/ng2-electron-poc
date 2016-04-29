@@ -9,16 +9,17 @@
     "tsc": "tsc",
     "build": "npm run frontend && tsc && gulp electron",
     "frontend": "gulp frontend && tsc",
-    "serve": "live-server dist/frontend/",
+    "serve": "live-server dist/frontend/ --entry-file=dist/frontend/index.html",
     "apps": "npm run build && gulp apps"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.16",
-    "systemjs": "0.19.26",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.35.0",
+    "pouchdb": "^5.3.2",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
+    "systemjs": "0.19.26",
     "zone.js": "0.6.12"
   },
   "keywords": [],

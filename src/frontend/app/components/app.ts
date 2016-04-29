@@ -1,3 +1,5 @@
+/// <reference path="../../../..//typings/browser/ambient/pouchdb/index.d.ts" />
+// Use above to reference to pouchdb
 //app.ts
 import { Component } from 'angular2/core' ;
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router' ;
@@ -48,5 +50,12 @@ import { BComponent } from './b.component' ;
 
 export class AppComponent{
   private caption: string = "Hello from ng2." ;
+  db : any ;
 
+  constructor(){
+    this.db = new PouchDB("db1") ;
+    this.db.info().then(function (info) {
+      console.log(info);
+    })
+  }
 }
