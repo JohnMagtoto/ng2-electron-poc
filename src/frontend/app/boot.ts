@@ -8,8 +8,10 @@ import {ROUTER_PROVIDERS} from 'angular2/router' ;
 import {LocationStrategy, HashLocationStrategy} from 'angular2/platform/common';
 
 // enableProdMode();
-bootstrap(AppComponent, [
-    ROUTER_PROVIDERS,
-    provide(LocationStrategy,
-           {useClass: HashLocationStrategy}) // .../#/crisis-center/
-  ]);
+// bootstrap(AppComponent, [
+//     ROUTER_PROVIDERS,
+//     provide(LocationStrategy,
+//            {useClass: HashLocationStrategy}) // .../#/crisis-center/
+//   ]);
+
+bootstrap(AppComponent) ;

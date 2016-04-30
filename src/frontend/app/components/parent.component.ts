@@ -9,8 +9,8 @@ import { BComponent } from './b.component' ;
   template : `
   <div>This is ParentComponent</div>
   <nav>
-    <a [routerLink]="['A']">A Component</a>
-    <a [routerLink]="['B']">B Component</a>
+    <a [routerLink]="['MainChild']">A Component</a>
+    <a [routerLink]="['SecondChild']">B Component</a>
   </nav>
   <router-outlet></router-outlet>
   `,
@@ -23,14 +23,14 @@ import { BComponent } from './b.component' ;
 
 @RouteConfig([
   {
-    path : '/aa',
-    name : 'A',
+    path : '/',
+    name : 'MainChild',
     component : AComponent,
     useAsDefault : true
   },
   {
-    path : '/bb',
-    name : 'B',
+    path : '/sibling_route',
+    name : 'SecondChild',
     component : BComponent
   }
 ])
