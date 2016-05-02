@@ -27,13 +27,21 @@ gulp.task('copy:vendor', function(){
         .pipe(gulp.dest('./dist/frontend/scripts/vendor'))
 })
 
+gulp.task('copy:html-css', function(){
+  return gulp.src([
+    './src/frontend/app/**/*.html',
+    './src/frontend/app/**/*.css'
+  ])
+      .pipe(gulp.dest('./dist/frontend/app'))
+})
+
 gulp.task('copy:index', function(){
     return gulp.src('./src/frontend/index.html')
         .pipe(gulp.dest('./dist/frontend'));
 });
 
 gulp.task('frontend', function(done){
-    return runSeq('clean', ['copy:vendor', 'copy:index'], done);
+    return runSeq('clean', ['copy:vendor', 'copy:index', 'copy:html-css'], done);
 })
 
 // gulpfile.js

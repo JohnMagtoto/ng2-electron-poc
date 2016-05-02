@@ -1,12 +1,12 @@
-/// <reference path="../../../..//typings/browser/ambient/pouchdb/index.d.ts" />
+/// <reference path="../../..//typings/browser/ambient/pouchdb/index.d.ts" />
 // Use above to reference to pouchdb
 //app.ts
 import { Component } from 'angular2/core' ;
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router' ;
 
-import { ParentComponent } from './parent.component' ;
-import { AComponent } from './a.component';
-import { BComponent } from './b.component' ;
+import { ParentComponent } from './components/parent.component' ;
+import { AComponent } from './components/a.component';
+import { BComponent } from './components/b.component' ;
 
 // import { Location } from 'angular2/platform/common' ;
 

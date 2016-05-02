@@ -6,14 +6,8 @@ import { BComponent } from './b.component' ;
 
 @Component({
   selector : 'parent-component',
-  template : `
-  <div>This is ParentComponent</div>
-  <nav>
-    <a [routerLink]="['MainChild']">A Component</a>
-    <a [routerLink]="['SecondChild']">B Component</a>
-  </nav>
-  <router-outlet></router-outlet>
-  `,
+  templateUrl : './app/components/parent.component.html',
+  styleUrls : [ './app/components/parent.component.css' ],
   directives : [
     ROUTER_DIRECTIVES,
     AComponent,
